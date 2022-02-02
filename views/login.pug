@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	div(class!=div_class)
+		!= message
+	form(method='post' action='/users/login')
+		label(for='name') Username:
+			input(
+				type='text'
+				name='user'
+			)
+		|
+		br
+		|
+		label(for='password') Password:
+			input(
+				type='password'
+				name='password'
+			)
+		|
+		br
+		|
+		input(type='submit')
